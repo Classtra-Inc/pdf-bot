@@ -49,6 +49,7 @@ function createS3Storage(options = {}) {
         s3Params: {
           Bucket: options.bucket,
           Key: fullRemotePath,
+          ContentType: "application/pdf"
         },
       }
 
