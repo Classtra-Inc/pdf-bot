@@ -20,8 +20,7 @@ function createS3Storage(options = {}) {
     throw new Error('S3: No bucket was specified')
   }
 
-  console.log('options: ', options)
-  return function uploadToS3 (localPath, job) {
+  return (localPath, job) => {
     console.log('options: ', options)
     return new Promise((resolve, reject) => {
       console.log('options: ', options)
