@@ -23,7 +23,7 @@ function createS3Storage(options = {}) {
   return (localPath, job) => {
     console.log('options: ', options)
     let promise = new Promise((resolve, reject) => {
-        console.log('options: ', options)
+        console.log('options inside promise: ', options)
         var awsS3Client = new AWS.S3({
                 accessKeyId: options.accessKeyId,
                 secretAccessKey: options.secretAccessKey,
