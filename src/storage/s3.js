@@ -44,6 +44,7 @@ function createS3Storage(options = {}) {
 
       var uploadOptions = {
         localFile: localPath,
+        defaultContentType: "application/pdf",
 
         s3Params: {
           Bucket: options.bucket,
