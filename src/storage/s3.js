@@ -53,7 +53,7 @@ function createS3Storage(options = {}) {
 
       debug('Pushing job ID %s to S3 path: %s/%s', job.id, options.bucket, fileName)
 
-      var uploader = client.upload(uploadOptions);
+      var uploader = client.uploadFile(uploadOptions);
       uploader.on('error', function(err) {
         reject(err)
       });
