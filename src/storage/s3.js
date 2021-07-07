@@ -21,7 +21,6 @@ function createS3Storage(options = {}) {
   }
 
   return (localPath, job) => {
-    console.log('options: ', options)
     let promise = new Promise((resolve, reject) => {
         console.log('options inside promise: ', options)
         var awsS3Client = new AWS.S3({
@@ -46,12 +45,10 @@ function createS3Storage(options = {}) {
   
         var uploadOptions = {
           localFile: localPath,
-          defaultContentType: "application/pdf",
   
           s3Params: {
             Bucket: options.bucket,
             Key: fullRemotePath,
-            ContentType: "application/pdf"
           },
         }
   
