@@ -29,11 +29,11 @@ function createS3Storage(options = {}) {
                 secretAccessKey: options.secretAccessKey,
                 region: options.region,
               })
-        var options = {
+        var s3Options = {
           s3Client: awsS3Client
         }
         
-        var client = s3.createClient(options)
+        var client = s3.createClient(s3Options)
   
         var remotePath = (options.path || '')
         if (typeof options.path === 'function') {
